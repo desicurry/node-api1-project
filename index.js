@@ -17,11 +17,7 @@ server.get('/', (req, res) => {
 
 });
 
-server.get("/api/users", (req, res) => {
 
-  res.status(200).json(users);
-
-});
 
 server.post(`/api/users`, (req, res) => {
 
@@ -47,6 +43,12 @@ server.post(`/api/users`, (req, res) => {
         res.status(201).json(users);
       }
     }
+  });
+
+  server.get("/api/users", (req, res) => {
+
+    res.status(200).json(users);
+  
   });
 
 server.get("/api/users/:id", (req, res) => {
